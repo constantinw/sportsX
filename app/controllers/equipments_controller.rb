@@ -1,11 +1,15 @@
 class EquipmentsController < ApplicationController
+
 before_action :set_equipment, only: [:show ]
 skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @equipments = Equipment.all
   end
 
+
   def show
+    @equipment = Equipment.find(equipment_params)
     @booking = Booking.new
     @booking.equipment = @equipment
     @booking.user = current_user
