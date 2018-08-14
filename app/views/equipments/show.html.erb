@@ -9,9 +9,13 @@
       <p>size: <%= @equipment.size %></p>
       <p>location: <%= @equipment.location %></p>
       <p>price: <%= @equipment.price_per_day %></p>
-      <div class="buttons">
-        <button type="button" class="btn btn-primary btn-equipment-reserve">Reserve!</button>
-      </div>
+    </div>
+    <div class="choose_date">
+      <%= simple_form_for [@equipment, @booking], html: {class: 'from-horizontal'} do |f| %>
+        <%= f.input :starts_at, as: :date, html5: true %>
+        <%= f.input :ends_at, as: :date, html5: true %>
+        <%= f.submit 'Reserve', class: 'btn btn-primary' %>
+      <% end %>
     </div>
   </div>
 </div>
