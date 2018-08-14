@@ -7,12 +7,14 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
+  <%= link_to "Men", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+  <%= link_to "Women", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+  <%= link_to "Children", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+  <%= link_to "Sports", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
