@@ -10,26 +10,20 @@
 }
 
 
-.flex-item {
-  flex: 0 0 50%;
+.img-tag-card{
+  height: 100%;
+  width: 100%;
 }
-
-.row{
-    display: table;
-    width: 100%; /*Optional*/
-    table-layout: fixed; /*Optional*/
-    border-spacing: 10px; /*Optional*/
-}
-
 .card {
   height: 175px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  background-size: cover !important;
+  background-image: cover !important;
   background-position: center;
   color: black;
   position: relative;
-  box-shadow: 0 14px 28px
+  box-shadow: 0 14px 28px;
 }
+
 .card-user {
   position: absolute;
   right: 10px;
