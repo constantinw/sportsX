@@ -1,0 +1,12 @@
+<h1>Booking Recored</h1>
+<p>Only for Development</p>
+<%= @bookings %>
+<br>
+<hr>
+<% @bookings.each do |booking| %>
+<p> booking_id: <%= booking %> </p>
+<p> user_id: <%= booking.user.email %> </p>
+<p> starts at: <%= booking.starts_at %> </p>
+<p> ends at: <%= booking.ends_at %> </p>
+<br>
+<% end %>
