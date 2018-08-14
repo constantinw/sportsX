@@ -1,0 +1,13 @@
+<div class="container">
+<%= simple_form_for(@equipment) do |f| %>
+  <%= f.input :category %>
+  <%= f.input :brand %>
+  <%= f.input :product_name %>
+  <%= f.input :size %>
+  <%= f.input :location %>
+  <%= f.input :price_per_day %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.submit "Add a equipment", class: "btn btn-primary" %>
+<% end %>
+</div>
