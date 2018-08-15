@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  skip_before_action :authenticate_user!
   def air
     @equipments = Equipment.where.not(latitude: nil, longitude: nil)
     @markers = @equipments.map do |equipment|
