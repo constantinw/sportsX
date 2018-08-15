@@ -3,12 +3,14 @@
 // @import "dashboard";
 // @import "profile";
 // @import "map";
+
 .flex-container {
   display: flex;
   justify-content: center;
   padding-top: 10px;
 }
 
+// card
 
 .img-tag-card{
   height: 100%;
@@ -66,3 +68,4 @@
 .card-link:hover {
   opacity: 0.1;
 }
+
