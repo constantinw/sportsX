@@ -1,5 +1,5 @@
 .footer {
-  padding-top: 50px;
+  margin-top: auto;
   background: white;
   display: flex;
   align-items: center;
@@ -30,4 +30,11 @@
 .footer-details {
   padding-top: 30px;
   height: 100%;
+}
+
+body,
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
