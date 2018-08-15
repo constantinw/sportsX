@@ -9,7 +9,7 @@ class BookingsController < ApplicationController
     @booking.equipment = Equipment.find(params[:equipment_id])
     @booking.user = current_user
     @booking.save
-    redirect_to equipment_path(@booking.equipment)
+    # redirect_to equipment_path(@booking.equipment)
   end
 
   private

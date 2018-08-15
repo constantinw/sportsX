@@ -1,11 +1,12 @@
 <div class="container">
   <div class="equipment-card">
-    <% if @equipment.photo.blank? %>
-      <div class="equipment-img"> <img src="https://www.decathlon.de/media/838/8385418/big_64b660c5-8c45-4199-9d0e-6c1b751917a0.jpg" width="500" alt="">
-      </div>
-    <% else %>
-      <%= cl_image_tag @equipment.photo, height: 300, width: 400, crop: :fill %>
-    <% end %>
+    <div class="equipment-img">
+      <% if @equipment.photo.blank? %>
+        <img src="https://www.decathlon.de/media/838/8385418/big_64b660c5-8c45-4199-9d0e-6c1b751917a0.jpg" width="500" alt="">
+      <% else %>
+        <%= cl_image_tag @equipment.photo, height: 300, width: 400, crop: :fill%>
+      <% end %>
+    </div>
     <div class="equipment-description">
       <h1><%= @equipment.category.capitalize %></h1>
       <p>brand: <%= @equipment.brand %></p>
@@ -18,10 +19,9 @@
       <%= simple_form_for [@equipment, @booking], html: {class: 'from-horizontal'} do |f| %>
         <%= f.input :starts_at, as: :date, html5: true %>
         <%= f.input :ends_at, as: :date, html5: true %>
-        <%= f.submit 'Reserve', class: 'btn btn-primary' %>
+        <%= f.submit 'Reserve', class: 'btn btn-primary btn-equipment-reserve' %>
       <% end %>
     </div>
   </div>
 </div>
-
 
