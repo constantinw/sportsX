@@ -76,6 +76,3 @@ equipment = Equipment.new(
 equipment.user = user
 equipment.remote_photo_url = url_golf
 equipment.save!
-
-
-
