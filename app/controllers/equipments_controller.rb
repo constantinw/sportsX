@@ -2,7 +2,13 @@ class EquipmentsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @equipments = Equipment.all
+    @equipments = Equipment.where.not(latitude: nil, longitude: nil)
+    @markers = @equipments.map do |equipment|
+      {
+        lat: equipment.latitude,
+        lng: equipment.longitude#,
+      }
+    end
   end
 
   def new
