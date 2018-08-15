@@ -8,7 +8,7 @@
     <% @equipments.each do |equipment| %>
       <div class="col-xs-12  col-sm-6 col-md-4">
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));"><%= cl_image_tag equipment.photo , class: "img-tag-card" %>
-          <%= image_tag "avatars/johnsnow.jpeg", :class => "card-user" %>
+          <%= image_tag "avatars/johnsnow.jpg", :class => "card-user" %>
           <div class="card-category"><%= equipment.category %></div>
           <div class="card-description"><h2><%= equipment.product_name %></h2></div>
           <%=  link_to  "", equipment_path(equipment), class: 'card-link' %>
