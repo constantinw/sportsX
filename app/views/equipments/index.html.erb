@@ -1,157 +1,21 @@
 <br>
-      <div class="row" class="flex-item" id="button-position">
-        <a href="http://localhost:3000/equipments/new" class="btn-treehouse">I want to rent out my stuff!</a>
-      </div>
+  <div class="row" class="flex-item" id="button-position">
+    <a href="http://localhost:3000/equipments/new" class="btn-treehouse">I want to rent out my stuff!</a>
+   </div>
 <br>
 <div class="container">
   <div class="row">
-    <div class="flex item">
+    <% @equipments.each do |equipment| %>
       <div class="col-xs-12  col-sm-6 col-md-4">
-        <!-- insert <div class="card"> -->
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));"><%= image_tag "surfboard.jpg", alt: "Surf Board", class: "img-tag-card"%>
-            <%= image_tag "avatars/arya.jpeg", :class => "card-user" %>
-            <div class="card-category">Water Sport</div>
-            <div class="card-description">
-              <h2>Surf Board</h2>
-              <p>Very cool, the best</p>
-            </div>
-            <a class="card-link" href="</equipments/1" ></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex item">
-       <div class="col-xs-12  col-sm-6 col-md-4">
-        <!-- insert <div class="card"> -->
-         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));"><%= image_tag "Kanu.jpg", alt: "Kanu", class: "img-tag-card" %>
-          <%= image_tag "avatars/Danny.jpeg", :class => "card-user" %>
-          <div class="card-category">Vehicles</div>
-          <div class="card-description">
-            <h2>Kanu</h2>
-            <p>Inflatable!</p>
-          </div>
-          <a class="card-link" href="#" ></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex item">
-     <div class="col-xs-12  col-sm-6 col-md-4">
-      <!-- insert <div class="card"> -->
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));"><%= image_tag "golf.jpg", alt: "Golf Clubs", class: "img-tag-card" %>
-          <%= image_tag "avatars/tyrion.jpeg", :class => "card-user" %>
-          <div class="card-category">Land</div>
-          <div class="card-description">
-            <h2>Golf Clubs</h2>
-            <p>For Beginners and Pros</p>
-          </div>
-          <a class="card-link" href="#" ></a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<br>
-
-  <div class="row">
-    <div class="flex item">
-      <div class="col-xs-12  col-sm-6 col-md-4">
-        <!-- insert <div class="card"> -->
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));"><%= image_tag "shotgun.jpg", alt: "Shotgun", class: "img-tag-card" %>
-            <%= image_tag "avatars/arya.jpeg", :class => "card-user" %>
-            <div class="card-category">Adults Only!</div>
-            <div class="card-description">
-              <h2>Shotgun</h2>
-              <p>Holland & Holland, a Masterpiece</p>
-            </div>
-            <a class="card-link" href="#" ></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex item">
-       <div class="col-xs-12  col-sm-6 col-md-4">
-        <!-- insert <div class="card"> -->
-         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));"><%= image_tag "bubbleballs.jpg", alt: "bubbleballs", class: "img-tag-card" %>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));"><%= cl_image_tag equipment.photo , class: "img-tag-card" %>
           <%= image_tag "avatars/johnsnow.jpeg", :class => "card-user" %>
-          <div class="card-category">Groups</div>
-          <div class="card-description">
-            <h2>Bubble Balls</h2>
-            <p>Two for the price of one!</p>
-          </div>
-          <a class="card-link" href="#" ></a>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="flex item">
-     <div class="col-xs-12  col-sm-6 col-md-4">
-      <!-- insert <div class="card"> -->
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));"><%= image_tag "beachbuggy.jpg", alt: "beachbuggy", class: "img-tag-card" %>
-          <%= image_tag "avatars/arya.jpeg", :class => "card-user" %>
-          <div class="card-category">Vehicles</div>
-          <div class="card-description">
-            <h2>Beach Buggy</h2>
-            <p>So much fun!</p>
-          </div>
-          <a class="card-link" href="#" ></a>
+          <div class="card-category"><%= equipment.category %></div>
+          <div class="card-description"><h2><%= equipment.product_name %></h2></div>
+          <%=  link_to  "", equipment_path(equipment), class: 'card-link' %>
         </div>
       </div>
-    </div>
-  </div>
-
-  <br>
-
-
-  <div class="row">
-    <div class="flex item">
-      <div class="col-xs-12  col-sm-6 col-md-4">
-        <!-- insert <div class="card"> -->
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));"><%= image_tag "sailingboat.jpg", alt: "sailingboat.jpg", class: "img-tag-card" %>
-            <%= image_tag "avatars/Danny.jpeg", :class => "card-user" %>
-            <div class="card-category">Vehicles</div>
-            <div class="card-description">
-              <h2>Sailing Boat</h2>
-              <p>Sailing like a Pro!</p>
-            </div>
-            <a class="card-link" href="#" ></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex item">
-       <div class="col-xs-12  col-sm-6 col-md-4">
-        <!-- insert <div class="card"> -->
-         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));"><%= image_tag "segelflugzeug.jpg", alt: "segelflugzeug.jpg", class: "img-tag-card" %>
-          <%= image_tag "avatars/arya.jpeg", :class => "card-user" %>
-          <div class="card-category">Vehicles</div>
-          <div class="card-description">
-            <h2>Glider</h2>
-            <p>Fly like a Bird!</p>
-          </div>
-          <a class="card-link" href="#" ></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex item">
-     <div class="col-xs-12  col-sm-6 col-md-4">
-      <!-- insert <div class="card"> -->
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));"><%= image_tag "beerbike.jpg", alt: "beerbike.jpg", class: "img-tag-card" %>
-          <%= image_tag "avatars/johnsnow.jpeg", :class => "card-user" %>
-          <div class="card-category">Vehicles</div>
-          <div class="card-description">
-            <h2>Beer Bike</h2>
-            <p>Celebrate with your friends!</p>
-          </div>
-          <a class="card-link" href="#" ></a>
-        </div>
-      </div>
-    </div>
-
+    <% end %>
   </div>
 </div>
-
 <br>
 
