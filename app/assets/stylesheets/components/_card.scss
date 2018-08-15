@@ -12,12 +12,12 @@
 
 .card {
   height: 175px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.9);
   background-image: cover !important;
   background-position: center;
-  color: black;
+  color: white;
   position: relative;
-  box-shadow: 0 14px 28px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   margin: 15px;
 }
 
