@@ -1,0 +1,16 @@
+.video-wrap {
+  position: relative;
+}
+.video-p {
+  font-family: serif;
+  color: #fff;
+  font-size: 400%;
+  position: absolute;
+  left: 30%;
+  top: 200px;
+  z-index: 2;
+}
+
+video {
+  z-index: -1;
+}
