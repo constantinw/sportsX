@@ -14,3 +14,33 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
     map.fitLatLngBounds(markers);
   }
 }
+
+const styles = [
+    {
+        "featureType": "all",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#ff6800"
+            },
+            {
+                "saturation": "20"
+            },
+            {
+                "lightness": "-8"
+            },
+            {
+                "gamma": "1.00"
+            },
+            {
+                "weight": "1.12"
+            }
+        ]
+    }
+];
+
+map.addStyle({
+  styles: styles,
+  mapTypeId: 'map_style'
+});
+map.setStyle('map_style');
