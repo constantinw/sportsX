@@ -8,20 +8,22 @@
       <% end %>
     </div>
     <div class="equipment-description">
-      <h1><%= @equipment.category.capitalize %></h1>
+      <h1 style="color: #FF5910;"><%= @equipment.category.capitalize %></h1>
+      <hr>
       <p>brand: <%= @equipment.brand %></p>
       <p>product: <%= @equipment.product_name %></p>
       <p>size: <%= @equipment.size %></p>
       <p>location: <%= @equipment.location %></p>
-      <p>price: <%= @equipment.price_per_day %></p>
+      <p>price: <%= @equipment.price_per_day %> euro / day</p>
     </div>
     <div class="choose_date">
       <%= simple_form_for [@equipment, @booking], html: {class: 'from-horizontal'} do |f| %>
         <%= f.input :starts_at, as: :date, html5: true %>
         <%= f.input :ends_at, as: :date, html5: true %>
-        <%= f.submit 'Reserve', class: 'btn btn-primary btn-equipment-reserve' %>
+        <%= f.submit 'Reserve', class: 'btn btn-treehouse btn-equipment-reserve' %>
       <% end %>
     </div>
   </div>
+    <%= link_to "Back", equipments_path, class: 'btn-treehouse' %>
 </div>
 
