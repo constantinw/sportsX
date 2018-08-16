@@ -2,7 +2,9 @@
   <div class="title">
     <h1 class="orange-font">Booking Record for previous</h1>
   </div>
-
+<%if  @bookings.first.nil? %>
+  <h3 class="booking-message orange-font">No previous bookings yet</h3>
+<% end %>
   <hr>
     <% @bookings.each do |booking| %>
       <div class="card-for-book">

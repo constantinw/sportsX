@@ -1,10 +1,10 @@
-
-
 <div class="container">
   <div class="title">
     <h1 class="orange-font">Booking Record for confirmed</h1>
   </div>
-
+<%if  @bookings.first.nil? %>
+  <h3 class="booking-message orange-font">No confirmed bookings yet</h3>
+<% end %>
   <hr>
   <% if @bookings %>
     <% @bookings.each do |booking| %>
@@ -23,9 +23,7 @@
       <% end %>
       <br>
     <% end %>
-    <% else %>
-      <h3 class="booking-message" style="color: #FF5910;">No confirmed bookings yet</h3>
-    <% end %>
+  <% end %>
   <br>
   <hr>
 </div>
