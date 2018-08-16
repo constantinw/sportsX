@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="title">
+    <h1 class="orange-font">Booking Record for previous</h1>
+  </div>
+
+  <hr>
+    <% @bookings.each do |booking| %>
+      <div class="card-for-book">
+        <% if booking.user == current_user %>
+          <% if booking.ends_at < Date.today %>
+            <p class="margin-booking-card-top"> <%= cl_image_tag booking.equipment.photo, height: 150, width: 220, crop: :fill, class: "card-booking-img" %> </p>
+            <p> product: <%= booking.equipment.product_name %> </p>
+            <p> user_id: <%= booking.user.email %></p>
+            <p> starts at: <%= booking.starts_at %></p>
+            <p> ends at: <%= booking.ends_at %></p>
+            <p> status: <%= booking.status %> </p>
+            <%= link_to "confirm", edit_booking_path(booking), class: "btn-treehouse btn-confirm" %>
+            <p class="margin-booking-card-bottom orange-font"> price: <%= (Date.parse(booking.ends_at.to_s) - Date.parse(booking.starts_at.to_s)).to_i*booking.equipment.price_per_day %></p>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  <br>
+  <hr>
+</div>
+
