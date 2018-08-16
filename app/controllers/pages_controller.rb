@@ -3,8 +3,11 @@ class PagesController < ApplicationController
 
 
   def home
+    @equipments = Equipment.all
   end
 
   def about
   end
+
+
 end
