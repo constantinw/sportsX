@@ -34,6 +34,10 @@ class EquipmentsController < ApplicationController
     @booking = Booking.new
     @booking.equipment = @equipment
     @booking.user = current_user
+    @markers = [{
+      lat: @equipment.latitude,
+      lng: @equipment.longitude
+    }]
   end
 
   private
