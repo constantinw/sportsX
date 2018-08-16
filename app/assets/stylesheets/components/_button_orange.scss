@@ -20,6 +20,17 @@
   margin-bottom: 100px;
 }
 
-#go-btn-position{
-  margin: 20px;
+.go-btn-treehouse {
+  padding: 5px 5px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: #FF5910;
+  transition: background 0.3s ease;
+  color: white;
+}
+.go-btn-treehouse:hover {
+  opacity: 1;
+  background: #E82D0C;
+  text-decoration: none;
+  color: white;
 }

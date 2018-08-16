@@ -3,14 +3,12 @@
   <div class="banner-content">
     <p><span id="banner-typed-text"></span></p>
   </div>
-  <div class="banner-content">
+  <div class="banner-content" id="banner-content-inline">
     <%= form_tag equipments_path, method: :get do %>
-    <%= text_field_tag :query,
-    params[:query],
+    <%= text_field_tag :query, params[:query],
     class: "form-control",
-      placeholder: "Find equipment"
-      %>
-      <%= submit_tag 'Go!', class: "btn-treehouse" %>
+    placeholder: "Find equipment" %>
+      <%= submit_tag 'Go!', class: "go-btn-treehouse", class: "go-btn-position" %>
       <% end %>
   </div>
 </div>
