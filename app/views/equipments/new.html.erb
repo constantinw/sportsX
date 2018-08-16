@@ -1,18 +1,23 @@
-<%= render 'shared/genericbanner' %>
-
-<div class="container">
-  <h1 style="color: #FF5910;">Add new stuff to rent out!</h1>
-  <div class="form">
-    <%= simple_form_for(@equipment) do |f| %>
-    <%= f.input :category, :collection => [['Air',1],['Land',2],['Water',3],['Groups',4]] %>
-    <%= f.input :brand %>
-    <%= f.input :product_name %>
-    <%= f.input :size %>
-    <%= f.input :location %>
-    <%= f.input :price_per_day %>
-    <%= f.input :photo %>
-    <%= f.input :photo_cache, as: :hidden %>
-    <%= f.submit "Add a equipment", class: "btn-equipment-add btn-treehouse" %>
-    <% end %>
+<div class="box">
+  <div class="box-left">
+    <div class="title">
+      <h2 class="orange-font">Add new stuff to rent out!</h2>
+    </div>
+    <div class="form form-card">
+      <%= simple_form_for(@equipment) do |f| %>
+      <%= f.input :category, :collection => [['Air',1],['Land',2],['Water',3],['Groups',4]] %>
+      <%= f.input :brand %>
+      <%= f.input :product_name %>
+      <%= f.input :size %>
+      <%= f.input :location %>
+      <%= f.input :price_per_day %>
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
+      <%= f.submit "Add a equipment", class: "btn-equipment-add btn-treehouse btn-add" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="box-right">
+    <%= render 'shared/genericbanner' %>
   </div>
 </div>
