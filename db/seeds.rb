@@ -5,6 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# search function gems
+require "open-uri"
+require "yaml"
+
 Booking.destroy_all
 Equipment.destroy_all
 User.destroy_all

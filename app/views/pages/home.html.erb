@@ -33,7 +33,25 @@
         <% end %>
       </div>
     </div>
+
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://cdn.surfer.com/uploads/2012/11/SFGP-110400-NSU-04-HR.jpg');">
+  <h1>SportX</h1>
+  <div class="banner-content">
+    <p><span id="banner-typed-text"></span></p>
+
   </div>
+  <div class="banner-content">
+
+    <%= form_tag equipments_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find equipment"
+      %>
+      <%= submit_tag 'Go!', class: "btn-treehouse" %>
+    <% end %>
+  </div>
+
 </div>
 <!-- <div class="video-wrap">
     <p class="video-p"><span id="banner-typed-text"></span></p>

@@ -2,7 +2,11 @@ class EquipmentsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @equipments = Equipment.where.not(latitude: nil, longitude: nil)
+    if params[:query].present?
+      @equipments = Equipment.where.not(latitude: nil, longitude: nil).search_by_product_name(params[:query])
+    else
+      @equipments = Equipment.where.not(latitude: nil, longitude: nil)
+    end
     @markers = @equipments.map do |equipment|
       {
         lat: equipment.latitude,
