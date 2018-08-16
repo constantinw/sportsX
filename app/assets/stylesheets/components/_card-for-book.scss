@@ -1,7 +1,44 @@
 .card-for-book {
+  position: relative;
   background-color: white;
-  padding-left: 70px;
+  padding-left: 50px;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   border-radius: 3px;
   margin-bottom: 20px;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.card-booking-img {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+
+
+.btn-confirm {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+}
+
+.booking-message {
+  text-align: center;
+  padding-top: 150px;
+}
+
+.margin-booking-card-top {
+  padding-top: 10px;
+}
+
+.margin-booking-card-bottom {
+  padding-bottom: 15px;
+}
+
+.card-booking-confirmed-img {
+  position: absolute;
+  top: 45px;
+  right: 30px;
 }

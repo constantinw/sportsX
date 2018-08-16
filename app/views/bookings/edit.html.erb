@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="title">
+    <h1 class="orange-font">Confirmation</h1>
+  </div>
+  <div class="card-for-book">
+    <h3 class="orange-font"> <%= @booking.equipment.product_name %> </h3>
+    <p> user: <%= @booking.user.email %> </p>
+    <p> start: <%= @booking.starts_at %> </p>
+    <p> end: <%= @booking.ends_at %> </p>
+
+    <%= form_for(@booking) do |f| %>
+      <div class="form-group">
+        <%= f.label :status %>
+        <%= f.select :status, options_for_select([["confirmed", true], ["pending", false]]) %>  </div>
+
+      <%= f.submit class: 'btn btn-treehouse btn-confirm' %>
+    <% end %>
+  </div>
+
+
+
+</div>
