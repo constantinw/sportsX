@@ -5,7 +5,7 @@
     </div>
     <div class="form form-card">
       <%= simple_form_for(@equipment) do |f| %>
-      <%= f.input :category, :collection => [['Air',1],['Land',2],['Water',3],['Groups',4]] %>
+      <%= f.input :category, :collection => [['Air',"Land"],['Land',"Land"],['Water',"Water"],['Groups',"Groups"]] %>
       <%= f.input :brand %>
       <%= f.input :product_name %>
       <%= f.input :size %>
