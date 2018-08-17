@@ -14,18 +14,18 @@ Booking.destroy_all
 Equipment.destroy_all
 User.destroy_all
 
-url_glider = "http://res.cloudinary.com/dyoy2poun/image/upload/v1534335446/or7tue10xsspqzvdtlic.jpg"
-url_boat = "http://res.cloudinary.com/dyoy2poun/image/upload/v1534335495/iqcca0lpza8cvnnuifuh.jpg"
-url_car = "http://res.cloudinary.com/dyoy2poun/image/upload/v1534337995/errfxvahmhcj7ndnotgt.jpg"
-url_bicycle = "http://res.cloudinary.com/dyoy2poun/image/upload/v1534335550/xs9qts53qpnabgck14gw.jpg"
-url_golf = "http://res.cloudinary.com/dyoy2poun/image/upload/v1534337193/hqbpanstvzhjhbwwe9jt.jpg"
-url_football = "http://res.cloudinary.com/dyoy2poun/image/upload/v1534499902/football.jpg"
-url_tug = "http://res.cloudinary.com/dyoy2poun/image/upload/v1534499902/tug.jpg"
-url_paume = "http://res.cloudinary.com/dyoy2poun/image/upload/v1534499902/Jeu_de_Paume.jpg"
-url_helicopter = "http://res.cloudinary.com/dyoy2poun/image/upload/v1534499902/helicopter.jpg"
-url_skydiving = "http://res.cloudinary.com/dyoy2poun/image/upload/v1534499902/skydiving.jpg"
-url_snorkelling = "http://res.cloudinary.com/dyoy2poun/image/upload/v1534499902/snorkelling.jpg"
-url_surfboard = "http://res.cloudinary.com/dyoy2poun/image/upload/v1534499903/surfboard.jpg"
+url_glider = "https://res.cloudinary.com/dyoy2poun/image/upload/v1534414134/mehcblzp9os0geudrwlf.jpg"
+url_boat = "https://res.cloudinary.com/dyoy2poun/image/upload/v1534412096/yyuvmvgoiupzetjkovxa.jpg"
+url_car = "https://res.cloudinary.com/dyoy2poun/image/upload/v1534423734/rmm89ddllxjrqsy7pex7.jpg"
+url_bicycle = "https://res.cloudinary.com/dyoy2poun/image/upload/v1534423735/wq3wgouqyx9eqiop3sh7.jpg"
+url_golf = "https://res.cloudinary.com/dyoy2poun/image/upload/v1534414138/gchmtwdthfimp3esbtsv.jpg"
+url_football = "https://res.cloudinary.com/dyoy2poun/image/upload/v1534499902/football.jpg"
+url_tug = "https://res.cloudinary.com/dyoy2poun/image/upload/v1534499902/tug.jpg"
+url_paume = "https://res.cloudinary.com/dyoy2poun/image/upload/v1534499902/Jeu_de_Paume.jpg"
+url_helicopter = "https://res.cloudinary.com/dyoy2poun/image/upload/v1534499902/helicopter.jpg"
+url_skydiving = "https://res.cloudinary.com/dyoy2poun/image/upload/v1534499902/skydiving.jpg"
+url_snorkelling = "https://res.cloudinary.com/dyoy2poun/image/upload/v1534499902/snorkelling.jpg"
+url_surfboard = "https://res.cloudinary.com/dyoy2poun/image/upload/v1534499903/surfboard.jpg"
 
 user = User.new(
   email: "bob@example.com",
