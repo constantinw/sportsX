@@ -25,8 +25,7 @@
 }
 
 .banner input {
-  color: rgb(0,0,0);
-  font-color: rgb(0,0,0);
+  // color: rgb(0,0,0);
 }
 
 .buttonorange {
@@ -39,4 +38,8 @@
 
 #banner-content-inline {
   display: inline-block;
+}
+
+#landing-form-flex {
+  display: flex;
 }
