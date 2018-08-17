@@ -1,65 +1,71 @@
 <div class="container">
-  <div class="equipment-card">
-    <div class="equipment-img">
-      <% if @equipment.photo.blank? %>
-        <img src="https://www.decathlon.de/media/838/8385418/big_64b660c5-8c45-4199-9d0e-6c1b751917a0.jpg" width="500" alt="">
-      <% else %>
-        <%= cl_image_tag @equipment.photo, height: 300, width: 400, crop: :fill%>
-      <% end %>
-    </div>
-    <div class="equipment-description">
-      <h1 style="color: #FF5910;"><%= @equipment.category.capitalize %></h1>
-      <hr>
-      <p>brand: <%= @equipment.brand %></p>
-      <p>product: <%= @equipment.product_name %></p>
-      <p>size: <%= @equipment.size %></p>
-      <p>location: <%= @equipment.location %></p>
-      <p>price: <%= @equipment.price_per_day %> euro / day</p>
-    </div>
-    <div class="choose_date">
-      <div class="form-wrapper" style="margin: 0 auto;">
-
-        <%= simple_form_for [@equipment, @booking], html: {class: "datepicker-form"}, method: "post" do |f| %>
-          <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-          <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-          <%= f.button :submit, "Reserve", class: "btn btn-treehouse btn-equipment-reserve" %>
+  <div class="card-for-show">
+    <div class="equipment-card">
+      <div class="equipment-img">
+        <% if @equipment.photo.blank? %>
+          <img src="https://www.decathlon.de/media/838/8385418/big_64b660c5-8c45-4199-9d0e-6c1b751917a0.jpg" width="500" alt="">
+        <% else %>
+          <%= cl_image_tag @equipment.photo, height: 300, width: 400, crop: :fill%>
         <% end %>
       </div>
-    </div>
-  </div>
+      <div class="equipment-description">
+        <h1 style="color: #FF5910;"><%= @equipment.category.capitalize %></h1>
+        <hr>
+        <p>brand: <%= @equipment.brand %></p>
+        <p>product: <%= @equipment.product_name %></p>
+        <p>size: <%= @equipment.size %></p>
+        <p>location: <%= @equipment.location %></p>
+        <p>price: <%= @equipment.price_per_day %> euro / day</p>
+      </div>
+      <div class="choose_date">
+        <div class="form-wrapper" style="margin: 0 auto;">
 
-
-  <%= link_to "Back to list", equipments_path, class: 'btn-treehouse' %>
-
-
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
-  <!-- Modal -->
-  <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Confirmation</h4>
-        </div>
-        <div class="modal-body">
-          <p>Date, Price, and so on should be displayed here</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= simple_form_for [@equipment, @booking], html: {class: "datepicker-form"}, method: "post" do |f| %>
+            <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+            <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+            <%= f.button :submit, "Reserve", class: "btn btn-treehouse btn-equipment-reserve" %>
+          <% end %>
         </div>
       </div>
-
     </div>
-  </div>
 
-  <br>
-  <hr>
-  <div class="map-bottom">
-    <div id="map" style="width: 100%; height: 600px;" data-markers="<%= @markers.to_json %>"></div>
+
+    <%= link_to "Back to list", equipments_path, class: 'btn-treehouse btn-back' %>
+
+
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Confirmation</h4>
+          </div>
+          <div class="modal-body">
+            <p>Date, Price, and so on should be displayed here</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <br>
+    <hr>
+    <div class="map-bottom">
+      <div class="title">
+        <h2 class="orange-font"> Check location</h2>
+        <br> <br>
+      </div>
+      <div id="map" style="width: 100%; height: 600px;" data-markers="<%= @markers.to_json %>"></div>
+    </div>
   </div>
 </div>
 
