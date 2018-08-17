@@ -5,22 +5,24 @@
 <br>
 <div class="row" class="flex-item">
   <br>
-  <div class="container">
-    <div class="row">
-      <% @equipments.each do |equipment| %>
-        <% if equipment.category == 'Land'  %>
-          <div class="col-xs-12  col-sm-6 col-md-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));"><%= cl_image_tag equipment.photo , class: "img-tag-card" %>
-              <%= image_tag "avatars/johnsnow.jpg", :class => "card-user" %>
-              <div class="card-description">
-                <h2><%= equipment.product_name %></h2>
-                <p><%= equipment.location %></p>
+  <div class="white-wrapper">
+    <div class="container">
+      <div class="row">
+        <% @equipments.each do |equipment| %>
+          <% if equipment.category == 'Land'  %>
+            <div class="col-xs-12  col-sm-6 col-md-4">
+              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));"><%= cl_image_tag equipment.photo , class: "img-tag-card" %>
+                <%= image_tag "avatars/johnsnow.jpg", :class => "card-user" %>
+                <div class="card-description">
+                  <h2><%= equipment.product_name %></h2>
+                  <p><%= equipment.location %></p>
+                </div>
+                <%=  link_to  "", equipment_path(equipment), class: 'card-link' %>
               </div>
-              <%=  link_to  "", equipment_path(equipment), class: 'card-link' %>
             </div>
-          </div>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
   </div>
 </div>
@@ -28,13 +30,10 @@
 
 <hr>
 
-<div id="button-position">
-  <%=  link_to  "I want to rent out my stuff, too!", new_equipment_path, class: 'btn-treehouse' %>
-</div>
+<%= render 'shared/btn-rent-out' %>
 
 <hr>
 
-  <div class="map-bottom">
-    <div id="map" style="width: 100%; height: 600px;" data-markers="<%= @markers.to_json %>"></div>
-  </div>
+<%= render 'shared/map' %>
+<br> <br> <br>
 </div>
