@@ -26,14 +26,12 @@
       </div>
     </div>
   </div>
-  <br> <br> <br>
-  <div class="map-bottom">
-    <div id="map" style="width: 100%; height: 600px;" data-markers="<%= @markers.to_json %>"></div>
-  </div>
-  <br>
-  <div id="button-position">
-   <h4 class="orange-font">equipment to rent out?</h4> <br> <%=  link_to  "Yes!", new_equipment_path, class: 'btn-treehouse' %>
-  </div>
-</div>
 
-<br> <br> <br>
+<br> <br> <br> <br> <br>
+
+<%= render 'shared/map' %>
+
+<%= render 'shared/btn-rent-out' %>
+
+<br> <br>
+
